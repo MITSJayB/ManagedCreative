@@ -5,6 +5,7 @@
   var img = document.getElementById('captcha-img');
   var status = document.getElementById('form-status');
   var send = document.getElementById('enquiry-send');
+  form.elements.returnURL.value = location.origin + '/thanks/';
   function loadCaptcha() {
     status.textContent = '';
     fetch('https://desk.zoho.uk/support/GenerateCaptcha?action=getNewCaptcha&_=' + Date.now())

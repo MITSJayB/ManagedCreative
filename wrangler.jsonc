@@ -1,0 +1,10 @@
+// Cloudflare deploy config: serves the static site from public/.
+// Cloudflare runs `npx wrangler deploy` on every push to main.
+{
+  "name": "managed-creative",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

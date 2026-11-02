@@ -162,7 +162,7 @@ footer{background:var(--ink);color:var(--white);padding-block:clamp(3rem,5vw,4.5
 .brands b{font-weight:700}
 .contact-ways{display:grid;gap:1.75rem}
 .contact-ways h2{font-size:1.0625rem;font-weight:600;letter-spacing:0;line-height:1.4;margin-bottom:.2rem;color:var(--muted)}
-.big-link{font-size:clamp(1.5rem,3vw,2.75rem);font-weight:800;line-height:1.1;overflow-wrap:anywhere;text-underline-offset:.15em;text-decoration-thickness:3px}
+.big-link{font-size:clamp(1.25rem,2.2vw,2rem);font-weight:800;line-height:1.1;overflow-wrap:anywhere;text-underline-offset:.15em;text-decoration-thickness:3px}
 .big-link:hover{color:var(--violet)}
 .legal-line{margin-top:clamp(2rem,4vw,3rem);padding-top:1.5rem;border-top:1px solid #33335A;font-size:.9375rem;color:var(--mist);display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
 .legal-line p{color:var(--mist);max-width:72ch}

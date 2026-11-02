@@ -111,7 +111,7 @@ pages.push({ path: '/approach/', title: 'Our Approach | Managed Creative', desc:
 // About
 pages.push({ path: '/about/', title: 'About Us | Managed Creative', desc: 'Managed Creative is a Bolton creative studio and part of Managed Technology Group, a connected group of specialist technology brands.',
   hero: pageHero({ eyebrow: 'About Managed Creative', h1: 'Creative on the surface. Considered underneath.', intro: 'We’re a creative studio in Bolton, helping businesses with websites, applications, branding and marketing.' }),
-  main: `<section class="section"><div class="wrap"><div class="split"><h2>What we care about</h2><div class="prose"><p>Great design is only the beginning. From a visitor’s first impression to the moment they make an enquiry or complete a task, every detail should have a job to do.</p><p>That’s why we start with what you’re trying to achieve, recommend what suits the job, and explain the options in plain English.</p></div></div><div class="split"><h2>How we think</h2><div>${ticks(['<b>Clear by design.</b> Thoughtful structure and messaging help people understand what you do and what to do next.', '<b>Made for real life.</b> Responsive layouts, accessible thinking and straightforward editing are considered from the start.', '<b>Connected to your business.</b> We consider the connections around your project, from domains and hosting to forms, integrations and ongoing care.'])}</div></div></div></section>
+  main: `<section class="section"><div class="wrap"><div class="split"><h2>What we care about</h2><div class="prose"><p>Great design is only the beginning. From a visitor’s first impression to the moment they make an enquiry or complete a task, every detail should have a job to do.</p><p>That’s why we start with what you’re trying to achieve, recommend what suits the job, and explain the options in plain English.</p></div></div><div class="split"><h2>Where it started</h2><div class="prose"><p>Managed Creative is built on the foundation of <b>Cre8ive Storm</b>, the original web design agency where everything began.</p><p>That work grew into a broader technology focus and, in time, Managed Technology Group. Managed Creative brings it back to where it started: good design, built around what a business needs.</p></div></div><div class="split"><h2>How we think</h2><div>${ticks(['<b>Clear by design.</b> Thoughtful structure and messaging help people understand what you do and what to do next.', '<b>Made for real life.</b> Responsive layouts, accessible thinking and straightforward editing are considered from the start.', '<b>Connected to your business.</b> We consider the connections around your project, from domains and hosting to forms, integrations and ongoing care.'])}</div></div></div></section>
 <section class="section tint"><div class="wrap split"><div><h2>Part of Managed Technology Group</h2><p style="margin-top:1rem;max-width:40ch">Managed Creative is part of a connected group of specialist brands based in Bolton, each with a clear area of expertise.</p></div><ul class="brands"><li><b>Managed Creative</b><span>Marketing and creative design</span></li><li><b><a href="https://managedtech.uk/">Managed IT Support</a></b><span>Proactive IT support and monitoring</span></li><li><b><a href="https://managedweb.uk/">Managed Web</a></b><span>Websites and digital presence</span></li><li><b>Managed Comms</b><span>Business communications</span></li><li><b>Managed Consulting</b><span>Strategic IT and Zoho consultancy</span></li><li><b>Managed Cyber</b><span>Cyber security and threat protection</span></li></ul></div></section>${cta}` });
 
 // FAQs
@@ -122,7 +122,26 @@ pages.push({ path: '/faqs/', title: 'Frequently Asked Questions | Managed Creati
 // Contact
 pages.push({ path: '/contact/', title: 'Contact Us | Managed Creative', desc: `Talk to Managed Creative in Bolton about a website, application, branding or marketing. Call ${PHONE} or email ${EMAIL}.`, noCta: true,
   hero: pageHero({ eyebrow: 'Your next move', h1: 'Let’s make something work beautifully.', intro: 'A new website, an application idea or a digital experience that’s ready for more? Tell us what you have in mind.' }),
-  main: `<section class="section"><div class="wrap split"><div class="contact-ways"><div><h2>Email</h2><a class="big-link" href="${mail('Starting a conversation')}">${EMAIL}</a></div><div><h2>Phone</h2><a class="big-link" href="${TEL}">${PHONE}</a></div><div><h2>Where we are</h2><p>St Peter’s House, Silverwell Street, Bolton, BL1 1PP</p></div></div><div class="prose"><h2>What helps us when you get in touch</h2><ul class="bullets"><li>A little about your business and who you serve</li><li>What you’d like to do, and why now</li><li>Links to your current website or any examples you like</li><li>Any dates that matter to you</li></ul><p>You don’t need a detailed brief. A rough idea is a good place to start, and we’ll help with the rest.</p><p>Looking for a domain or hosting? <a href="https://managedweb.uk/">Managed Web</a> is the place to go.</p></div></div></section>` });
+  script: '/assets/contact.js',
+  main: `<section class="section"><div class="wrap split"><div><div class="contact-ways"><div><h2>Email</h2><a class="big-link" href="${mail('Starting a conversation')}">${EMAIL}</a></div><div><h2>Phone</h2><a class="big-link" href="${TEL}">${PHONE}</a></div><div><h2>Where we are</h2><p>St Peter’s House, Silverwell Street, Bolton, BL1 1PP</p></div></div><div class="prose contact-tips"><p>You don’t need a detailed brief. A rough idea is a good place to start, and we’ll help with the rest.</p><p>Looking for a domain or hosting? <a href="https://managedweb.uk/">Managed Web</a> is the place to go.</p></div></div>
+<form class="enquiry" id="enquiry" action="https://desk.zoho.uk/support/WebToCase" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+<h2>Send us an enquiry</h2>
+<input type="hidden" name="xnQsjsdp" value="edbsn5a47fcdc5e4a4ea9758b903b425bcf51"><input type="hidden" name="xmIwtLD" value="edbsn6983a173f0089a1deb9f156ef4aa38f7"><input type="hidden" name="xJdfEaS" value=""><input type="hidden" name="actionType" value="Q2FzZXM="><input type="hidden" name="returnURL" value="${ORIGIN}/thanks/"><input type="hidden" name="zsCaptchaSrc" value="">
+<div class="field-row"><div class="field"><label for="f-first">First name</label><input id="f-first" name="First Name" type="text" maxlength="120" autocomplete="given-name"></div><div class="field"><label for="f-last">Last name <span>(required)</span></label><input id="f-last" name="Contact Name" type="text" maxlength="120" required autocomplete="family-name"></div></div>
+<div class="field-row"><div class="field"><label for="f-email">Email <span>(required)</span></label><input id="f-email" name="Email" type="email" maxlength="120" required autocomplete="email"></div><div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" maxlength="120" autocomplete="tel"></div></div>
+<div class="field"><label for="f-subject">What’s it about? <span>(required)</span></label><input id="f-subject" name="Subject" type="text" maxlength="255" required></div>
+<div class="field"><label for="f-message">Tell us what you have in mind</label><textarea id="f-message" name="Description" rows="6" maxlength="5000"></textarea></div>
+<div class="field captcha"><label for="f-captcha">Enter the characters shown <span>(required)</span></label><div class="captcha-row"><img id="captcha-img" alt="Security check characters" width="150" height="50"><button type="button" class="link-btn" id="captcha-new">Show different characters</button></div><input id="f-captcha" name="zsWebFormCaptchaWord" type="text" maxlength="10" required autocomplete="off"></div>
+<p class="form-note" id="form-status" role="status" aria-live="polite"></p>
+<p class="form-note">We’ll use your details to reply to your enquiry. See our <a href="/privacy/">privacy policy</a>.</p>
+<button class="btn btn-ink" id="enquiry-send" type="submit">Send enquiry</button>
+<noscript><p class="form-note">This form needs JavaScript for its security check. You can email <a href="mailto:${EMAIL}">${EMAIL}</a> instead.</p></noscript>
+</form></div></section>` });
+
+// Thanks
+pages.push({ path: '/thanks/', title: 'Thanks | Managed Creative', desc: 'Your enquiry has been sent to Managed Creative.', noCta: true, noindex: true,
+  hero: pageHero({ eyebrow: 'Enquiry sent', h1: 'Thanks for getting in touch.', intro: 'We’ve received your enquiry and will be in touch.', actions: `<a class="btn btn-line" href="/">Back to the homepage</a>` }),
+  main: `<section class="section"><div class="wrap prose"><p>Need to add something? Email <a href="mailto:${EMAIL}">${EMAIL}</a> or call <a href="${TEL}">${PHONE}</a>.</p></div></section>` });
 
 // Bolton
 pages.push({ path: '/web-design-bolton/', title: 'Web Design in Bolton | Managed Creative', desc: 'Web design in Bolton from Managed Creative: WordPress and Webflow websites, custom applications, branding and marketing for local businesses.', current: '/services/',
@@ -134,9 +153,9 @@ pages.push({ path: '/privacy/', title: 'Privacy Policy | Managed Creative', desc
   hero: pageHero({ eyebrow: 'Last updated: 2 November 2026', h1: 'Privacy policy' }),
   main: `<section class="section"><div class="wrap"><div class="prose">
 <h2>Who we are</h2><p>Managed Creative is a trading name of Managed Technology Group Limited (company number 17115757), St Peter’s House, Silverwell Street, Bolton, BL1 1PP. We are the data controller for the personal data described in this policy.</p><p>Email <a href="mailto:${EMAIL}">${EMAIL}</a> or call <a href="${TEL}">${PHONE}</a> with any privacy questions.</p>
-<h2>What we collect</h2><ul class="bullets"><li><b>Enquiries:</b> your name, contact details and anything else you tell us when you email or call.</li><li><b>Technical data:</b> your IP address, browser type and the pages requested, which are processed when you visit this website.</li></ul><p>This website has no contact form or analytics, and it doesn’t set cookies of its own.</p>
+<h2>What we collect</h2><ul class="bullets"><li><b>Enquiries:</b> your name, contact details and anything else you tell us when you complete our enquiry form, email or call.</li><li><b>Technical data:</b> your IP address, browser type and the pages requested, which are processed when you visit this website.</li></ul><p>This website has no analytics and doesn’t set cookies of its own.</p>
 <h2>Why we use it</h2><ul class="bullets"><li>To respond to your enquiry and take steps towards working together (contract or legitimate interests).</li><li>To deliver and secure this website (legitimate interests).</li><li>To meet our legal obligations (legal obligation).</li></ul>
-<h2>Who we share it with</h2><p>We don’t sell your data. We use service providers who process it for us:</p><ul class="bullets"><li><b>Cloudflare</b>, which hosts and secures this website.</li><li><b>Google</b>, whose Google Fonts service supplies this website’s font. Your browser’s request, including your IP address, goes to Google.</li><li><b>Our email, customer relationship and accounting providers</b>, if you contact us or become a client.</li></ul><p>Some of these providers may transfer data outside the UK. Where they do, appropriate safeguards are used.</p>
+<h2>Who we share it with</h2><p>We don’t sell your data. We use service providers who process it for us:</p><ul class="bullets"><li><b>Cloudflare</b>, which hosts and secures this website.</li><li><b>Google</b>, whose Google Fonts service supplies this website’s font. Your browser’s request, including your IP address, goes to Google.</li><li><b>Zoho</b>, whose Zoho Desk service receives and stores enquiries from our form and email, and provides the form’s security check.</li><li><b>Our email, customer relationship and accounting providers</b>, if you contact us or become a client.</li></ul><p>Some of these providers may transfer data outside the UK. Where they do, appropriate safeguards are used.</p>
 <h2>How long we keep it</h2><p>We keep enquiry data for 24 months from your last contact unless we enter into an agreement with you. We keep client data for the length of the agreement plus 6 years to meet legal and accounting requirements.</p>
 <h2>Your rights</h2><p>Under UK data protection law you can ask to access, correct or delete your personal data, restrict or object to how we use it, and receive a copy in a portable format. Email us to make a request.</p><p>You can also complain to the Information Commissioner’s Office at <a href="https://ico.org.uk/">ico.org.uk</a> or on 0303 123 1113.</p>
 <h2>Changes to this policy</h2><p>We’ll post any changes on this page and update the date at the top.</p>
@@ -154,7 +173,7 @@ const render = (p) => {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${p.title.replace(/&/g, '&amp;')}</title>
-<meta name="description" content="${p.desc}">
+<meta name="description" content="${p.desc}">${p.noindex ? '\n<meta name="robots" content="noindex">' : ''}
 <link rel="canonical" href="${url}">
 <meta name="theme-color" content="#00001F">
 <meta property="og:type" content="website">
@@ -171,7 +190,7 @@ const render = (p) => {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-${ld}
+${ld}${p.script ? `\n<script src="${p.script}" defer></script>` : ''}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -185,7 +204,7 @@ ${p.main}
 </main>
 <footer class="dark"><div class="wrap">
 <div class="foot">
-<div><img src="/assets/managed-creative-logo-reversed.svg" width="646" height="218" alt="Managed Creative"><p>Creative design, connected to Managed Technology Group.</p><p>Bolton, North West England.</p></div>
+<div><img src="/assets/managed-creative-logo-reversed.svg" width="646" height="218" alt="Managed Creative"><p>Creative design, connected to Managed Technology Group.</p><p>Bolton, North West England.</p><p class="credit">Built on the foundation of Cre8ive Storm.</p></div>
 <div><h3>Services</h3><ul>${SERVICES.map((s) => `<li><a href="/services/${s.slug}/">${s.name}</a></li>`).join('')}<li><a href="/web-design-bolton/">Web design in Bolton</a></li></ul></div>
 <div><h3>Company</h3><ul><li><a href="/approach/">Our approach</a></li><li><a href="/about/">About</a></li><li><a href="/faqs/">FAQs</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://managedweb.uk/">Managed Web</a></li></ul></div>
 <div><h3>Contact</h3><a href="${TEL}">${PHONE}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></div>
@@ -203,5 +222,6 @@ for (const p of pages) {
   writeFileSync(file, render(p));
 }
 copyFileSync('src/site.css', 'public/assets/site.css');
-writeFileSync('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map((p) => `<url><loc>${ORIGIN}${p.path}</loc></url>`).join('')}</urlset>\n`);
+copyFileSync('src/contact.js', 'public/assets/contact.js');
+writeFileSync('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.filter((p) => !p.noindex).map((p) => `<url><loc>${ORIGIN}${p.path}</loc></url>`).join('')}</urlset>\n`);
 console.log(pages.length, 'pages');

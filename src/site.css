@@ -192,3 +192,6 @@ footer{background:var(--ink);color:var(--white);padding-block:clamp(3rem,5vw,4.5
 .enquiry .btn{justify-self:start;cursor:pointer;font:inherit;font-weight:700}
 .enquiry .btn:disabled{opacity:.6;cursor:wait}
 @media (max-width:560px){.field-row{grid-template-columns:minmax(0,1fr)}}
+
+/* header call to action: keep text readable on hover, including on the Contact page */
+.top li:last-child a:hover,.top li:last-child a:focus-visible,.top li:last-child a[aria-current="page"]:hover,.top li:last-child a[aria-current="page"]:focus-visible{background:var(--amber-b);border-color:var(--amber-b);color:var(--ink)}

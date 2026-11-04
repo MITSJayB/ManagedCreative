@@ -6,6 +6,8 @@ const ORIGIN = 'https://managedcreative.uk';
 const EMAIL = 'hello@managedcreative.uk';
 const PHONE = '01204 954050';
 const TEL = 'tel:+441204954050';
+const WHATSAPP = '07396 037987';
+const WA = 'https://wa.me/447396037987?text=Hi%20Managed%20Creative%2C%20I%20have%20an%20enquiry.';
 const mail = (s) => `mailto:${EMAIL}?subject=${encodeURIComponent(s)}`;
 const star = '<svg aria-hidden="true"><use href="#star"/></svg>';
 const ticks = (items) => `<ul class="ticks">${items.map((i) => `<li>${star}<span>${i}</span></li>`).join('')}</ul>`;
@@ -123,7 +125,7 @@ pages.push({ path: '/faqs/', title: 'Frequently Asked Questions | Managed Creati
 pages.push({ path: '/contact/', title: 'Contact Us | Managed Creative', desc: `Talk to Managed Creative in Bolton about a website, application, branding or marketing. Call ${PHONE} or email ${EMAIL}.`, noCta: true,
   hero: pageHero({ eyebrow: 'Your next move', h1: 'Let’s make something work beautifully.', intro: 'A new website, an application idea or a digital experience that’s ready for more? Tell us what you have in mind.' }),
   script: '/assets/contact.js',
-  main: `<section class="section"><div class="wrap split"><div><div class="contact-ways"><div><h2>Email</h2><a class="big-link" href="${mail('Starting a conversation')}">${EMAIL}</a></div><div><h2>Phone</h2><a class="big-link" href="${TEL}">${PHONE}</a></div><div><h2>Where we are</h2><p>St Peter’s House, Silverwell Street, Bolton, BL1 1PP</p></div></div><div class="prose contact-tips"><p>You don’t need a detailed brief. A rough idea is a good place to start, and we’ll help with the rest.</p><p>Looking for a domain or hosting? <a href="https://managedweb.uk/">Managed Web</a> is the place to go.</p></div></div>
+  main: `<section class="section"><div class="wrap split"><div><div class="contact-ways"><div><h2>Email</h2><a class="big-link" href="${mail('Starting a conversation')}">${EMAIL}</a></div><div><h2>Phone</h2><a class="big-link" href="${TEL}">${PHONE}</a></div><div><h2>WhatsApp</h2><a class="big-link" href="${WA}">${WHATSAPP}</a></div><div><h2>Where we are</h2><p>St Peter’s House, Silverwell Street, Bolton, BL1 1PP</p></div></div><div class="prose contact-tips"><p>You don’t need a detailed brief. A rough idea is a good place to start, and we’ll help with the rest.</p><p>Looking for a domain or hosting? <a href="https://managedweb.uk/">Managed Web</a> is the place to go.</p></div></div>
 <form class="enquiry" id="enquiry" action="https://desk.zoho.uk/support/WebToCase" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
 <h2>Send us an enquiry</h2>
 <input type="hidden" name="xnQsjsdp" value="edbsn5a47fcdc5e4a4ea9758b903b425bcf51"><input type="hidden" name="xmIwtLD" value="edbsn6983a173f0089a1deb9f156ef4aa38f7"><input type="hidden" name="xJdfEaS" value=""><input type="hidden" name="actionType" value="Q2FzZXM="><input type="hidden" name="returnURL" value="${ORIGIN}/thanks/"><input type="hidden" name="zsCaptchaSrc" value="">
@@ -207,7 +209,7 @@ ${p.main}
 <div><img src="/assets/managed-creative-logo-reversed.svg" width="646" height="218" alt="Managed Creative"><p>Creative design, connected to Managed Technology Group.</p><p>Bolton, North West England.</p><p class="credit">Built on the foundation of Cre8ive Storm.</p></div>
 <div><h3>Services</h3><ul>${SERVICES.map((s) => `<li><a href="/services/${s.slug}/">${s.name}</a></li>`).join('')}<li><a href="/web-design-bolton/">Web design in Bolton</a></li></ul></div>
 <div><h3>Company</h3><ul><li><a href="/approach/">Our approach</a></li><li><a href="/about/">About</a></li><li><a href="/faqs/">FAQs</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://managedweb.uk/">Managed Web</a></li></ul></div>
-<div><h3>Contact</h3><a href="${TEL}">${PHONE}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></div>
+<div><h3>Contact</h3><a href="${TEL}">${PHONE}</a><br>WhatsApp <a href="${WA}">${WHATSAPP}</a><br><a href="mailto:${EMAIL}">${EMAIL}</a></div>
 </div>
 <div class="legal-line"><p>Managed Creative is a trading name of Managed Technology Group Limited, company number 17115757. St Peter’s House, Silverwell Street, Bolton, BL1 1PP.</p><a href="/privacy/">Privacy policy</a></div>
 </div></footer>
